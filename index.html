@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#20372a">
+  <meta name="description" content="Desi Crumbs — handmade cheesecakes, brownies, cookies and custom cakes from Hinal's kitchen in Surat.">
+  <meta property="og:title" content="Desi Crumbs — From Hinal's Kitchen">
+  <meta property="og:description" content="Small-batch desserts, custom cakes and gifting treats in Surat.">
+  <meta property="og:image" content="assets/landing-page-image.png">
+  <link rel="icon" href="assets/logo-badge.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Desi Crumbs — From Hinal's Kitchen</title>
+</head>
+<body>
+<a class="skip-link" href="#app">Skip to content</a>
+
+<div class="welcome-screen" id="welcomeScreen" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+  <div class="welcome-card">
+    <div class="welcome-logo"><img src="assets/logo-badge.png" alt="Desi Crumbs logo"></div>
+    <p class="eyebrow"><span></span> From Hinal's Kitchen <span></span></p>
+    <h1 id="welcomeTitle">A little sweetness,<br><em>made for you.</em></h1>
+    <p class="welcome-copy">Tell us your name for a more personal welcome. Nothing is stored and no account is created.</p>
+    <form id="welcomeForm" novalidate>
+      <div class="form-grid two">
+        <label>First name<input id="firstName" autocomplete="given-name" maxlength="40" required placeholder="First name"></label>
+        <label>Last name<input id="lastName" autocomplete="family-name" maxlength="40" required placeholder="Last name"></label>
+      </div>
+      <p class="field-error" id="welcomeError"></p>
+      <button class="btn btn-primary btn-wide" type="submit">Enter Desi Crumbs <span>→</span></button>
+    </form>
+    <small>No sign-up · Just a sweeter welcome</small>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <button class="brand" data-view="home" aria-label="Desi Crumbs home">
+      <span class="brand-mark"><img src="assets/logo-badge.png" alt=""></span>
+      <span><strong>Desi Crumbs</strong><small>From Hinal's Kitchen</small></span>
+    </button>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <button data-view="home">Home</button>
+      <button data-view="menu">Menu</button>
+      <button data-view="custom">Custom Cakes</button>
+      <button data-view="gallery">Gallery</button>
+      <button data-view="story">Our Story</button>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="cart-button" id="cartButton" type="button">Cart <b id="cartCount">0</b></button>
+      <a class="btn btn-wa desktop-order" id="headerWhatsApp" href="#">WhatsApp</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <div class="container">
+      <button data-view="home">Home</button>
+      <button data-view="menu">Menu</button>
+      <button data-view="custom">Custom Cakes</button>
+      <button data-view="gallery">Gallery</button>
+      <button data-view="story">Our Story</button>
+      <button id="mobileCart">Cart <span id="mobileCartCount">0</span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="app">
+  <!-- HOME -->
+  <section class="view active" id="view-home" data-view-section="home">
+    <div class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Small-batch home bakery</p>
+        <h1>Handmade desserts,<br><em>from Hinal's kitchen.</em></h1>
+        <p class="hero-welcome">Welcome, <strong id="customerName">sweet tooth</strong>.</p>
+        <p class="hero-lead">Cheesecakes, brownies, cookies and celebration cakes — made in small batches for cravings, gifting and life's sweetest moments.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-view="menu">Explore the menu <span>→</span></button>
+          <a class="btn btn-wa" id="heroWhatsApp" href="#">Order on WhatsApp</a>
+        </div>
+        <p class="hero-note">✦ Surat, Gujarat · Made to order · Please allow at least 24 hours</p>
+      </div>
+      <div class="hero-media">
+        <div class="hero-image"><img src="assets/landing-page-image.png" alt="Desi Crumbs handmade desserts"></div>
+        <div class="hero-badge"><span>Freshly</span><strong>made</strong><small>with love</small></div>
+      </div>
+    </div>
+
+    <div class="container home-categories">
+      <div class="section-heading compact">
+        <p class="eyebrow"><span></span> What we bake <span></span></p>
+        <h2>A little something for every craving.</h2>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-menu-jump="cheesecake">
+          <img src="assets/mix-piecesof-cheesecakes-posters.jpg" alt="Assorted cheesecake pieces" loading="lazy">
+          <span>01</span><div><h3>Cheesecakes</h3><p>Classic · Nutella · Oreo · Biscoff</p></div>
+        </button>
+        <button class="category-card" data-menu-jump="brownie">
+          <img src="assets/brownies-poster.avif" alt="Fresh brownies" loading="lazy">
+          <span>02</span><div><h3>Brownies</h3><p>Fudgy · Chewy · Cakey</p></div>
+        </button>
+        <button class="category-card" data-menu-jump="cookie">
+          <img src="assets/cookies-mixed.jpg" alt="Assorted cookies" loading="lazy">
+          <span>03</span><div><h3>Cookies</h3><p>Chocolate chip · Double chocolate · Nutella</p></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="view" id="view-menu" data-view-section="menu">
+    <div class="container page-head">
+      <p class="eyebrow"><span></span> Our Menu <span></span></p>
+      <h2>Choose your sweet spot.</h2>
+      <p>From Hinal's kitchen to your table — discover something sweet to make your moment special.</p>
+    </div>
+
+    <div class="container menu-tabs" role="tablist">
+      <button class="menu-tab active" data-menu-category="cheesecake">Cheesecakes</button>
+      <button class="menu-tab" data-menu-category="brownie">Brownies</button>
+      <button class="menu-tab" data-menu-category="cookie">Cookies</button>
+    </div>
+
+    <!-- CHEESECAKES -->
+    <div class="container menu-panel active" data-menu-panel="cheesecake">
+      <div class="menu-panel-head">
+        <div><p class="eyebrow"><span></span> Cheesecakes</p><h3>Pick a flavour & format.</h3></div>
+        <p>Piece prices are shown below. Whole cakes are <strong>Price on Enquiry</strong> via WhatsApp.</p>
+      </div>
+      <article class="builder-card product-card" data-product="Cheesecake">
+        <div class="product-visual">
+          <img id="cheesecakePreview" src="assets/nutella-cheesecake-piece.jfif" alt="Nutella cheesecake piece" loading="eager">
+          <span class="visual-tag" id="cheesecakeImageTag">Piece preview</span>
+        </div>
+        <div class="builder-content">
+          <p class="product-kicker">Cheesecake</p>
+          <h3 id="cheesecakeTitle">Nutella Cheesecake</h3>
+          <p class="product-description">Creamy cheesecake with a rich, indulgent finish.</p>
+          <div class="choice-box">
+            <label>Order format<select data-field="mode" id="cheesecakeMode">
+              <option value="">Choose format</option><option value="pieces">Pieces</option><option value="whole">Whole cake</option>
+            </select></label>
+            <label>Flavour<select data-field="flavour" id="cheesecakeFlavour">
+              <option value="">Choose flavour</option>
+              <option>Classic New York</option>
+              <option>Nutella</option><option>Oreo</option><option>Chocolate</option><option>Biscoff</option>
+            </select></label>
+            <label class="pieces-field">Quantity<input data-field="quantity" id="cheesecakeQty" type="number" min="1" step="1" placeholder="e.g. 3"></label>
+            <label class="size-field hidden">Whole cake size<select data-field="size" id="cheesecakeSize">
+              <option value="">Choose size</option><option>500gm</option><option>1kg</option><option>2kg</option>
+            </select></label>
+          </div>
+          <p class="preview-note" id="cheesecakePreviewNote"></p>
+          <div class="product-bottom"><span class="price-label" id="cheesecakePrice">Choose format & flavour</span><button class="btn btn-primary add-btn" type="button" disabled>Add to Cart</button></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- BROWNIES -->
+    <div class="container menu-panel" data-menu-panel="brownie">
+      <div class="menu-panel-head">
+        <div><p class="eyebrow"><span></span> Brownies</p><h3>Texture first. Flavour next.</h3></div>
+        <p>Choose <strong>Fudgy, Chewy or Cakey</strong>. Nuts, Millet / Sugar-Free and Brownie Cake are Price on Enquiry.</p>
+      </div>
+      <article class="builder-card product-card" data-product="Brownie Box">
+        <div class="product-visual">
+          <img id="browniePreview" src="assets/chocolate-brownies.jpg" alt="Chocolate brownies" loading="lazy">
+          <span class="visual-tag" id="brownieImageTag">Product preview</span>
+        </div>
+        <div class="builder-content">
+          <p class="product-kicker">Brownie Box</p>
+          <h3 id="brownieTitle">Chocolate Brownies</h3>
+          <p class="product-description">Choose the texture that matches your craving.</p>
+          <div class="choice-box">
+            <label>Texture<select data-field="type" id="brownieType"><option value="">Choose texture</option><option>Fudgy</option><option>Chewy</option><option>Cakey</option></select></label>
+            <label>Flavour<select data-field="flavour" id="brownieFlavour">
+              <option value="">Choose flavour</option><option>Chocolate</option><option>Biscoff</option><option>Nutella</option>
+              <option>Nuts Brownie</option><option>Millet / Sugar-Free Brownie</option><option>Brownie Cake</option>
+            </select></label>
+            <label>Quantity<input data-field="quantity" id="brownieQty" type="number" min="1" step="1" placeholder="e.g. 6"></label>
+          </div>
+          <p class="preview-note">Texture availability can vary by flavour; WhatsApp will confirm any enquiry combination.</p>
+          <div class="product-bottom"><span class="price-label" id="browniePrice">Choose texture & flavour</span><button class="btn btn-primary add-btn" type="button" disabled>Add to Cart</button></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- COOKIES -->
+    <div class="container menu-panel" data-menu-panel="cookie">
+      <div class="menu-panel-head">
+        <div><p class="eyebrow"><span></span> Cookies</p><h3>Pick your favourites.</h3></div>
+        <p><strong>Cookie quantities must be multiples of 3.</strong> 3, 6, 9, 12… are accepted.</p>
+      </div>
+      <article class="builder-card product-card" data-product="Cookie Box">
+        <div class="product-visual">
+          <img id="cookiePreview" src="assets/cookies-mixed.jpg" alt="Assorted Desi Crumbs cookies" loading="lazy">
+          <span class="visual-tag">Batch of 3</span>
+        </div>
+        <div class="builder-content">
+          <p class="product-kicker">Cookies</p>
+          <h3 id="cookieTitle">Chocolate Chip Cookies</h3>
+          <p class="product-description">Fresh-baked cookies in quantities of 3 or more.</p>
+          <div class="choice-box">
+            <label>Flavour<select data-field="flavour" id="cookieFlavour">
+              <option value="">Choose flavour</option><option>Chocolate Chip</option><option>Double Chocolate</option><option>Nutella</option>
+              <option>Healthy · Chocolate</option><option>Healthy · Double Chocolate</option>
+            </select></label>
+            <label>Quantity<input data-field="quantity" id="cookieQty" type="number" min="3" step="3" value="3"></label>
+          </div>
+          <p class="preview-note">Quantity rule: 3, 6, 9, 12… only.</p>
+          <div class="product-bottom"><span class="price-label" id="cookiePrice">Choose flavour</span><button class="btn btn-primary add-btn" type="button" disabled>Add to Cart</button></div>
+        </div>
+      </article>
+
+      <article class="mini-product">
+        <img src="assets/cookie-tins.png" alt="Desi Crumbs cookie tins" loading="lazy">
+        <div><p class="eyebrow"><span></span> Gift-ready</p><h3>Cookie Tin</h3><p>Ask on WhatsApp for current tin availability and pricing.</p><a class="btn btn-light" id="tinWhatsApp" href="#">Enquire on WhatsApp</a></div>
+      </article>
+    </div>
+
+    <div class="container menu-cta"><div><p class="eyebrow"><span></span> Celebration time?</p><h3>Build a cake around your idea.</h3></div><button class="btn btn-primary" data-view="custom">Customize Your Cake →</button></div>
+  </section>
+
+  <!-- CUSTOM -->
+  <section class="view" id="view-custom" data-view-section="custom">
+    <div class="container page-head">
+      <p class="eyebrow"><span></span> Custom Cakes <span></span></p>
+      <h2>Your cake,<br><em>your way.</em></h2>
+      <p>Choose a size, shape and flavour, then tell Hinal what you want the design to feel like. Final pricing is confirmed on WhatsApp.</p>
+    </div>
+    <div class="container custom-layout">
+      <div class="custom-copy">
+        <div class="custom-image"><img src="assets/brownie-cake.jpg" alt="Celebration cake inspiration" loading="lazy"></div>
+        <div class="custom-points">
+          <span>01</span><div><strong>Any flavour</strong><p>Describe the flavour you have in mind.</p></div>
+          <span>02</span><div><strong>Your shape</strong><p>Round, heart, square, circle, rectangle or customized.</p></div>
+          <span>03</span><div><strong>Your design</strong><p>Add colours, theme, writing and decoration notes.</p></div>
+        </div>
+      </div>
+      <form class="custom-form" id="cakeForm" novalidate>
+        <h3>Start your cake enquiry</h3>
+        <p>Everything here goes into a WhatsApp enquiry — no payment is taken on the website.</p>
+        <div class="form-grid two">
+          <label>Weight<select id="cakeWeight" required><option value="">Choose weight</option><option>100gm</option><option>250gm</option><option>500gm</option><option>1kg</option><option>1.5kg</option><option>2kg</option><option>3kg</option><option>4kg</option><option>5kg</option></select></label>
+          <label>Shape<select id="cakeShape" required><option value="">Choose shape</option><option>Round</option><option>Heart</option><option>Square</option><option>Circle</option><option>Rectangle</option><option>Customize</option></select></label>
+        </div>
+        <label>Flavour<input id="cakeFlavour" maxlength="80" required placeholder="e.g. chocolate hazelnut, vanilla berry"></label>
+        <label>Design notes <span class="optional">optional</span><textarea id="cakeDescription" maxlength="300" placeholder="Theme, colours, writing, decorations…"></textarea></label>
+        <p class="field-error" id="cakeError"></p>
+        <button class="btn btn-primary btn-wide" type="submit">Send Custom Cake Enquiry →</button>
+        <small class="form-note">Price on Enquiry · Hinal confirms availability and final quote on WhatsApp.</small>
+      </form>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="view" id="view-gallery" data-view-section="gallery">
+    <div class="container page-head">
+      <p class="eyebrow"><span></span> Gallery <span></span></p>
+      <h2>Made to be looked at.<br><em>Made to be eaten.</em></h2>
+      <p>Real Desi Crumbs photography — desserts, packaging and baking moments from the kitchen.</p>
+    </div>
+    <div class="container gallery-grid">
+      <figure class="gallery-item tall"><img src="assets/landing-page-image.png" alt="Desi Crumbs dessert spread" loading="lazy"><figcaption><strong>The Desi Crumbs table</strong><span>Made for sharing</span></figcaption></figure>
+      <figure class="gallery-item"><img src="assets/newyork-cheesecake-cake.jpg" alt="Classic New York cheesecake whole cake" loading="lazy"><figcaption><strong>Classic New York</strong><span>Whole cake</span></figcaption></figure>
+      <figure class="gallery-item"><img src="assets/nutella-cheesecake-piece.jfif" alt="Nutella cheesecake piece" loading="lazy"><figcaption><strong>Nutella Cheesecake</strong><span>Per-piece favourite</span></figcaption></figure>
+      <figure class="gallery-item"><img src="assets/lotus-cheesecake-cake.jpg" alt="Biscoff cheesecake whole cake" loading="lazy"><figcaption><strong>Biscoff Cheesecake</strong><span>Whole cake</span></figcaption></figure>
+      <figure class="gallery-item wide"><img src="assets/bitesOf-brownie.jfif" alt="Brownie bites" loading="lazy"><figcaption><strong>Brownie Bites</strong><span>Rich chocolate moments</span></figcaption></figure>
+      <figure class="gallery-item"><img src="assets/cookie-tins.png" alt="Cookie tins" loading="lazy"><figcaption><strong>Cookie Tins</strong><span>Gift-ready</span></figcaption></figure>
+      <figure class="gallery-item"><img src="assets/cookies-dark-choc.jpg" alt="Double chocolate cookies" loading="lazy"><figcaption><strong>Double Chocolate</strong><span>Soft · rich · chocolatey</span></figcaption></figure>
+      <figure class="gallery-item video"><video autoplay muted loop playsinline preload="metadata" poster="assets/cookies-mixed.jpg" aria-label="Assorted cookies baking"><source src="assets/soft-cookies-video.mp4" type="video/mp4"></video><figcaption><strong>Fresh Cookie Moments</strong><span>From the kitchen</span></figcaption></figure>
+      <figure class="gallery-item video wide"><video autoplay muted loop playsinline preload="metadata" poster="assets/brownies-poster.avif" aria-label="Brownies being packaged"><source src="assets/brownie-under-package.mp4" type="video/mp4"></video><figcaption><strong>Brownie Packaging</strong><span>Ready to go</span></figcaption></figure>
+      <figure class="gallery-item"><img src="assets/mix-cookies-box.png" alt="Mixed cookie gift box" loading="lazy"><figcaption><strong>Mixed Cookie Box</strong><span>Made for gifting</span></figcaption></figure>
+      <figure class="gallery-item"><img src="assets/chocolate-cheesecake-piece.jfif" alt="Chocolate cheesecake piece" loading="lazy"><figcaption><strong>Chocolate Cheesecake</strong><span>Deep cocoa finish</span></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- STORY / CONTACT -->
+  <section class="view" id="view-story" data-view-section="story">
+    <div class="container story-layout">
+      <div>
+        <p class="eyebrow"><span></span> From Hinal's Kitchen</p>
+        <h2>A home bakery with a little more heart.</h2>
+        <p>Desi Crumbs keeps the personal feel of a home kitchen: small batches, thoughtful details and desserts prepared for the person who is actually going to enjoy them.</p>
+        <p>Whether it is a cheesecake for yourself, cookies for gifting or a celebration cake built around an idea, every order starts with a conversation.</p>
+        <div class="story-facts">
+          <div><strong>Small batch</strong><span>Personal attention in every bake.</span></div>
+          <div><strong>Made to order</strong><span>Freshly prepared for your occasion.</span></div>
+          <div><strong>Surat</strong><span>Local home-bakery service.</span></div>
+        </div>
+      </div>
+      <div class="story-card"><img src="assets/logo-badge.png" alt="Desi Crumbs logo"><p class="script-quote">A little sweetness,<br>made personally for you.</p><a class="btn btn-wa btn-wide" id="storyWhatsApp" href="#">Chat on WhatsApp</a><a class="instagram-link" href="https://instagram.com/thedesicrumbs" target="_blank" rel="noopener">Follow @thedesicrumbs on Instagram</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><button class="brand footer-brand" data-view="home"><span class="brand-mark"><img src="assets/logo-badge.png" alt=""></span><span><strong>Desi Crumbs</strong><small>From Hinal's Kitchen</small></span></button><p>Small-batch desserts made in Surat, Gujarat.</p></div>
+    <div><strong>Explore</strong><button data-view="menu">Menu</button><button data-view="custom">Custom Cakes</button><button data-view="gallery">Gallery</button></div>
+    <div><strong>Order</strong><button id="footerCart">Cart</button><a id="footerWhatsApp" href="#">WhatsApp</a><a href="https://instagram.com/thedesicrumbs" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© <span id="year"></span> Desi Crumbs</span><span>Made with love in a home kitchen.</span></div>
+</footer>
+
+<aside class="cart-drawer" id="cart" aria-hidden="true">
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <div class="cart-panel">
+    <div class="cart-head"><div><p class="eyebrow"><span></span> Your order</p><h2>Sweet cart</h2></div><button class="icon-button" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer">
+      <label>Requested date & time<input id="orderDateTime" type="datetime-local"></label>
+      <p class="field-error" id="orderTimeError"></p>
+      <div class="cart-total" id="cartTotal">Total: —</div>
+      <button class="btn btn-wa btn-wide" id="checkoutButton" disabled>Review on WhatsApp →</button>
+      <small>Please allow at least 24 hours. Your order is confirmed only after WhatsApp review.</small>
+    </div>
+  </div>
+</aside>
+
+<div class="modal hidden" id="feedbackModal" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+  <div class="modal-backdrop"></div>
+  <div class="feedback-card">
+    <p class="eyebrow"><span></span> One tiny thing</p>
+    <h2 id="feedbackTitle">How was your website experience?</h2>
+    <div class="feedback-actions"><button data-feedback="happy">😊 <strong>Happy</strong></button><button data-feedback="needs">😔 <strong>Needs Improvement</strong></button></div>
+    <p id="feedbackMessage"></p><button class="btn btn-wa btn-wide hidden" id="continueWhatsApp">Continue to WhatsApp →</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js" defer></script>
+</body>
+</html>
